@@ -1,0 +1,20 @@
+.hidden-file-input {
+    display: none;
+}
+
+.file-input-button {
+    padding: 5px 15px 5px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.file-input-button .icon-container {
+    margin-right: 5px;
+}
+
+.file-input-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

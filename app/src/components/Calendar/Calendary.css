@@ -1,0 +1,65 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.calendar .top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-mode, .calendar-mode .selector, .calendar .options, .calendar-view{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 0 10px;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.calendar-mini, .calendar-day {
+    display: flex;
+    width: 20vw;
+    height: 100%
+}
+
+.calendar-main {
+    display:flex;
+    flex-direction: column;
+    width: 60vw;
+}
+
+.calendar .selector {
+    display: flex;
+    padding: 8px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 5px 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+
+.calendar-mini {
+    /*width: 0;*/
+    transition:  width 0.5s ease-in-out;
+}
+.calendar-day {
+    /*width: 0;*/
+    transition: width 0.5s ease-in-out;
+}
+.week-days {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.week-days .week-day {
+    width: 14%
+}

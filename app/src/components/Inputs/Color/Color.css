@@ -1,0 +1,65 @@
+.color-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.color-input-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #000000;
+    border: none;
+}
+
+
+
+
+.color-picker-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);;
+    border-radius: 10px;
+    z-index: 1000;
+    overflow: hidden;
+
+}
+
+.color-top-bar {
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.color-display{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background: #ff0000;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.color-selection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+.color-selector {
+    display: flex;
+}
+
+.color-input-container .icon-container{
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.color-input-container .icon-container:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}

@@ -1,0 +1,133 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--font-color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+:root {
+  overflow: hidden;
+  --title-bar-height: 40px;
+  --background-color: rgb(76, 84, 94);
+  --font-color: #f6f6f6;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: var(--background-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-container {
+  box-shadow: 0 0 15px #000;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin: var(--title-bar-height) 14px 14px;
+  border-radius: 12px;
+  height: calc(100vh - var(--title-bar-height));
+  overflow: hidden;
+  /*background: url("../../assets/background.jpg");*/
+  background-size: cover;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.icon-container svg {
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 20px;
+  height: 20px;
+}
+
+.separator-h {
+  margin: 10px 0;
+  height: 1px;
+  width: 100%;
+  background: rgba(200, 200, 200, 0.4);
+}
+
+.separator-v {
+  margin: 0 10px;
+  height: 100%;
+  width: 1px;
+  background: rgba(200, 200, 200, 0.4);
+}
+
+/*SEARCH BAR*/
+
+.search-bar {
+  width: 100%;
+  max-width: 730px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.search-bar.selected {
+  box-shadow: 0 0 0 2px white;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  background: none;
+  outline: none;
+  color: #f6f6f6;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.search-bar .icon-container {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.search-bar .icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bg-hover-effect:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
