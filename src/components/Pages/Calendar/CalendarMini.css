@@ -1,0 +1,18 @@
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
+    margin: 4px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.selected-day {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.today {
+    background-color: #1a43ff;
+}
