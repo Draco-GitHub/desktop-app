@@ -75,7 +75,7 @@ const Settings: React.FC<{ toggleSettings: () => void }> = ({ toggleSettings }) 
             style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
         >
             <div
-                className="d-flex flex-row rounded-2 overflow-hidden border"
+                className="d-flex flex-row rounded-2 border"
                 onClick={(e) => e.stopPropagation()}
                 style={{
                     width: "960px",

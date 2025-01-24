@@ -5,7 +5,7 @@ const Month: React.FC<CalendarProps> = ({}:CalendarProps) => {
 
     return (
         <React.Fragment>
-            <div className="week-days">
+            <div className="w-100">
             </div>
         </React.Fragment>
     )

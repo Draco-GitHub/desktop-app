@@ -24,9 +24,9 @@ const App: React.FC = () => {
     };
 
     return (
-        <div className="app-container d-flex flex-row flex-grow-1">
+        <div className="app-container d-flex flex-row flex-grow-1" style={{maxWidth: "100vw"}}>
             {settingsDisplayed && <Settings toggleSettings={toggleSettings}/>}
-            <SideNav openPage={openPage} toggleSettings={toggleSettings} />
+            <SideNav openPage={openPage} toggleSettings={toggleSettings}/>
             <div className="page-content d-flex flex-grow-1">{currentPage.content}</div>
         </div>
     );

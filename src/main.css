@@ -1,11 +1,10 @@
 /*@import url('https://fonts.cdnfonts.com/css/gg-sans-2');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');*/
 
-
-
 * {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   box-sizing: border-box;
   font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--font-color);
@@ -21,6 +20,7 @@
   --title-bar-height: 40px;
   --background-color: rgb(62, 62, 62);
   --background-hover-effect: rgba(0, 0, 0, 0.3);
+  --border-color: rgb(103, 103, 103);
   --font-color: #f6f6f6;
   background: var(--background-color);
   font-size: 16px;

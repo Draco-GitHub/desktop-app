@@ -56,13 +56,9 @@ const CalendarMini: React.FC<CalendarProps> = ({ currentDate, setSelectedDate }:
         "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
     ];
 
-    const changeMonth = (direction: "prev" | "next") => {
+    const changeMonth = (direction: 1 | -1) => {
         const newDate = new Date(displayedDate);
-        if (direction === "prev") {
-            newDate.setMonth(displayedDate.getMonth() - 1);
-        } else {
-            newDate.setMonth(displayedDate.getMonth() + 1);
-        }
+        newDate.setMonth(displayedDate.getMonth() + direction);
         setDisplayedDate(newDate);
     };
 
@@ -72,13 +68,13 @@ const CalendarMini: React.FC<CalendarProps> = ({ currentDate, setSelectedDate }:
     };
 
     return (
-        <div className="calendar-mini">
-            <div className="d-flex justify-content-between gap-2 align-items-center" style={{background: "#272727"}}>
+        <div className="d-flex flex-column p-2 " style={{background: "#373737", border: "1px solid var(--border-color)", borderRadius:"10px"}}>
+            <div className="d-flex justify-content-between gap-2 align-items-center" style={{textWrap: "nowrap"}} >
                 {months[currentMonth]} {currentYear}
                 <div className="d-flex">
                     <StarIcon className="bg-hover-effect"/>
-                    <ChevronLeftIcon className="bg-hover-effect" onClick={() => changeMonth("prev")}/>
-                    <ChevronRightIcon className="bg-hover-effect" onClick={() => changeMonth("next")}/>
+                    <ChevronLeftIcon className="bg-hover-effect" onClick={() => changeMonth(-1)}/>
+                    <ChevronRightIcon className="bg-hover-effect" onClick={() => changeMonth(+1)}/>
                 </div>
             </div>
             <div className="d-flex flex-row" style={{fontWeight: "bold"}}>
@@ -95,9 +91,7 @@ const CalendarMini: React.FC<CalendarProps> = ({ currentDate, setSelectedDate }:
                     <div className="d-flex flex-row" key={index}>
                         {week.map((dayObj, dayIndex) => (
                             <div
-                                className={`day bg-hover-effect ${selectedDate?.toDateString() === dayObj.date.toDateString() ? "selected" : ""} ${
-                                    dayObj.isToday ? "today" : ""
-                                }`}
+                                className={`day bg-hover-effect ${dayObj.isToday ? "today" : ""} ${selectedDate?.toDateString() === dayObj.date.toDateString() ? "selected-day" : ""} ${!dayObj.isCurrentMonth ? "other-month" : ""}`}
                                 key={dayIndex}
                                 onClick={() => handleDayClick(dayObj.date)}
                             >
